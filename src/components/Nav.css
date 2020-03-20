@@ -1,16 +1,17 @@
 .Nav {
-  background: white;
-  position: sticky;
-  top: 0;
-  z-index: 1;
+    background: black;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    color: white;
 }
 
 .Nav--Container {
-  display: flex;
-  align-items: center;
-  height: 6rem;
+    display: flex;
+    align-items: center;
+    height: 6rem;
 }
 
 .Nav .Logo {
-  margin-right: 3rem;
+    margin-right: 3rem;
 }
