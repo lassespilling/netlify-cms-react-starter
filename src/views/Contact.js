@@ -10,13 +10,13 @@ export default ({ fields }) => {
   const { body, title, subtitle, featuredImage, address, phone, email } = fields
   return (
     <div className="Contact">
-      <PageHeader
-        title={title}
-        subtitle={subtitle}
-        backgroundImage={featuredImage}
-      />
-
       <div className="section Contact--Section1">
+        <PageHeader
+          large
+          title={title}
+          subtitle={subtitle}
+          backgroundImage={featuredImage}
+        ></PageHeader>
         <div className="container Contact--Section1--Container">
           <div>
             <Content source={body} />

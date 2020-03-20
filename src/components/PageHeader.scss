@@ -1,0 +1,35 @@
+.PageHeader {
+  color: var(--brown);
+  padding: 15rem 0;
+}
+
+.PageHeader-large {
+}
+
+.PageHeader--Title {
+  font-size: 7rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-block-start: 0;
+  margin-top: -1rem;
+  line-height: 7rem;
+  margin: auto;
+  margin-bottom: 0;
+}
+
+.Logo-header {
+  margin: auto;
+  width: 5rem;
+}
+
+.PageHeader--Subtitle {
+  font-family: var(--font-light);
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-top: 2rem;
+  & p {
+    margin: 0;
+  }
+}

@@ -6,7 +6,10 @@
   --midGrey: #cacaca;
   --darkGrey: #272727;
   --danger: #ff3d3d;
-  --font-primary: 'Open Sans', sans-serif;
+  --brown: #834e21;
+  --font-primary: 'Poppins', sans-serif;
+  --font-light: 'Montserrat light', sans-serif;
+  --font-headings: 'Montserrat black', sans-serif;
   --font-system: '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto',
     'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -15,18 +18,18 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
+  font-size: 70%;
   min-height: 100%;
   background: var(--lightGrey);
 }
 
 body {
-  font-family: var(--font-system);
+  font-family: var(--font-primary);
   min-height: 100%;
   position: relative;
   background: white;
-  color: var(--secondary);
-  font-size: 1.6em;
+  color: var(--brown);
+  font-size: 16px;
   font-weight: 400;
   letter-spacing: 0.01em;
   line-height: 1.6;
@@ -37,6 +40,10 @@ a {
   color: var(--primary);
 }
 
+.icon {
+  font-style: normal;
+}
+
 strong {
   font-weight: 600;
 }
@@ -44,6 +51,14 @@ strong {
 p {
   margin-top: 0;
   margin-bottom: 1em;
+  max-width: 50rem;
+}
+
+h1 {
+  font-family: var(--font-headings);
+  font-size: 5rem;
+  max-width: 40rem;
+  margin: auto;
 }
 
 h1,
@@ -135,7 +150,6 @@ blockquote {
 
 .section {
   width: 100%;
-  padding: 7.5rem 0;
 }
 .section.thick {
   padding: 10rem 0;

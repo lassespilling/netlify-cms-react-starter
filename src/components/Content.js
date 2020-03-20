@@ -3,7 +3,7 @@ import Marked from 'react-markdown'
 import PropTypes from 'prop-types'
 
 import { getImageSrc, getImageSrcset } from '../util/getImageUrl'
-import './Content.css'
+import './Content.scss'
 
 const encodeMarkdownURIs = (source = '') => {
   const markdownLinkRegex = /\[(?:\[[^\]]*\]|[^[\]])*\]\([ \t]*<?((?:\([^)]*\)|[^()])*?)>?[ \t]*(['"].*?\6[ \t]*)?\)/g
@@ -18,7 +18,7 @@ const ImageWithSrcset = ({ nodeKey, src, alt, ...props }) => {
   const decodedSrc = decodeURI(src)
   return (
     <img
-      className='Content--Image'
+      className="Content--Image"
       {...props}
       src={getImageSrc(decodedSrc)}
       srcSet={getImageSrcset(decodedSrc)}
@@ -33,7 +33,7 @@ const HtmlBlock = ({ value }) => {
     <div
       className={`Content--Iframe`}
       dangerouslySetInnerHTML={{
-        __html: value
+        __html: value,
       }}
     />
   )
@@ -45,7 +45,7 @@ const Content = ({ source, src, className = '' }) => (
     source={encodeMarkdownURIs(source || src)}
     renderers={{
       image: ImageWithSrcset,
-      html: HtmlBlock
+      html: HtmlBlock,
     }}
   />
 )
@@ -53,7 +53,7 @@ const Content = ({ source, src, className = '' }) => (
 Content.propTypes = {
   source: PropTypes.string,
   src: PropTypes.string,
-  className: PropTypes.string
+  className: PropTypes.string,
 }
 
 export default Content

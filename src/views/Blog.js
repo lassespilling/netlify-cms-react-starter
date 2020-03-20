@@ -11,19 +11,19 @@ export default ({
   fields,
   posts = [],
   postCategories = [],
-  showFeatured = true
+  showFeatured = true,
 }) => {
   const { title, subtitle, featuredImage } = fields
   posts = _sortBy(posts, ['date']).reverse()
 
   return (
-    <main className='Blog'>
+    <main className="Blog">
       <PageHeader
+        large
         title={title}
         subtitle={subtitle}
         backgroundImage={featuredImage}
-      />
-
+      ></PageHeader>
       {!!postCategories.length && (
         <PostCategoriesNav categories={postCategories} />
       )}

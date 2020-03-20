@@ -12,7 +12,6 @@ import Contact from './views/Contact'
 import NoMatch from './views/NoMatch'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
-import GithubCorner from './components/GithubCorner'
 import ServiceWorkerNotifications from './components/ServiceWorkerNotifications'
 import data from './data.json'
 import { slugify } from './util/url'
@@ -32,7 +31,7 @@ const RouteWithMeta = ({ component: Component, ...props }) => (
 
 class App extends Component {
   state = {
-    data
+    data,
   }
 
   getDocument = (collection, name) =>
@@ -41,14 +40,14 @@ class App extends Component {
 
   getDocuments = collection => this.state.data[collection] || []
 
-  render () {
+  render() {
     const globalSettings = this.getDocument('settings', 'global')
     const {
       siteTitle,
       siteUrl,
       siteDescription,
       socialMediaCard,
-      headerScripts
+      headerScripts,
     } = globalSettings
 
     const posts = this.getDocuments('posts').filter(
@@ -61,10 +60,9 @@ class App extends Component {
 
     return (
       <Router>
-        <div className='React-Wrap'>
+        <div className="React-Wrap">
           <ScrollToTop />
           <ServiceWorkerNotifications reloadOnUpdate />
-          <GithubCorner url='https://github.com/Jinksi/netlify-cms-react-starter' />
           <Helmet
             defaultTitle={siteTitle}
             titleTemplate={`${siteTitle} | %s`}
@@ -88,27 +86,27 @@ class App extends Component {
 
           <Switch>
             <RouteWithMeta
-              path='/'
+              path="/"
               exact
               component={Home}
               description={siteDescription}
               fields={this.getDocument('pages', 'home')}
             />
             <RouteWithMeta
-              path='/about/'
+              path="/about/"
               exact
               component={About}
               fields={this.getDocument('pages', 'about')}
             />
             <RouteWithMeta
-              path='/contact/'
+              path="/contact/"
               exact
               component={Contact}
               fields={this.getDocument('pages', 'contact')}
               siteTitle={siteTitle}
             />
             <RouteWithMeta
-              path='/blog/'
+              path="/blog/"
               exact
               component={Blog}
               fields={this.getDocument('pages', 'blog')}
