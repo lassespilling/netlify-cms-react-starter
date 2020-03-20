@@ -57,6 +57,12 @@ export default ({ fields }) => {
                 <Content source={coronaIngress} />
               </div>
             </div>
+            <div className="row">
+              <div className="col-sm-6"></div>
+              <div className="col-sm-6">
+                <Content source={coronaIngress} />
+              </div>
+            </div>
           </div>
         </div>
       </div>
